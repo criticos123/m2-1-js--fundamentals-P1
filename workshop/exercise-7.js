@@ -10,3 +10,14 @@
 // It's 11h. Time to train!
 // It's 12h. Time to train!
 // It's 13h. Time to eat!
+
+
+for(let n=0;n<=23;n++){
+    if(n==7||n==13||n==18){
+    console.log("It's "+n+"h."+" "+"Time to eat");
+    }else if(n<=5||n>=22){
+        console.log("It's "+n+"h."+" "+"Time to sleep");
+    }else{
+        console.log("It's "+n+"h."+" "+"Time to train");
+    }
+}
