@@ -4,24 +4,28 @@
 
 1. ( ) "I am a "Horse""
 2. ( ) "I 'prefer' ducks'
-3. ( ) 'Yes, duck is nice'
-4. ( ) "Ah, but I\'m vegan!"
+3. (x ) 'Yes, duck is nice'
+4. (x) "Ah, but I\'m vegan!"
 5. ( ) 'You'll eat salad then'
-6. ( ) 'Yes I\'ll eat salad'
-7. ( ) "I'm happy to hear that!"
+6. (x ) 'Yes I\'ll eat salad'
+7. (x) "I'm happy to hear that!"
 8. ( ) "\"Happy to hear " + 'that" ' + "he says!"
-9. ( ) “Hello world!”
+9. (x ) “Hello world!”
 
 ## Question 2: For the strings in Question 1 that were invalid, rewrite them to be valid:
+1."I am a Horse"
+2."I prefer ducks"
+3.'You\'ll eat salad'
+4."\"+"Happy to hear " + 'that" ' + "he says!"
 
 ## Question 3: Which of the following expressions evaluate to true? Add an 'x' between the ( ) to indicate that it's true.
 
 1. ( ) 7 == 2
-2. ( ) 7 == 7
+2. (x ) 7 == 7
 3. ( ) 7 == '7'
-4. ( ) 7 != 0
-5. ( ) 7 !== '7'
-6. ( ) 7 != '7'
+4. (x ) 7 != 0
+5. (x ) 7 !== '7'
+6. (x ) 7 != '7'
 7. ( ) 7 != 7
 
 ## Question 4: Which of the following expressions are truthy?
@@ -36,19 +40,19 @@
 
 ## Question 5: Which of the following are valid objects?
 
-1. ( ) {}
+1. (x ) {}
 2. ( ) { 'hello' }
-3. ( ) { name: 'I am fruit' }
+3. (x ) { name: 'I am fruit' }
 4. ( ) {'brand-name': 'Dior' }
-5. ( ) { brand-name: 'Channel' }
-6. ( ) { cool_name: 'bob' + ' Dylan', age: 25 }
+5. (x ) { brand-name: 'Channel' }
+6. (x ) { cool_name: 'bob' + ' Dylan', age: 25 }
 
 ## Question 6: For each array, specify the number of elements and the type of each element.
 
 1. ['cat', 'dog', 'bird']
 
-- number of elements:
-- type of _each_ element:
+- number of elements:3
+- type of _each_ element:string
   - 'cat':
   - 'dog':
   - 'bird':
@@ -56,28 +60,50 @@
 (Use the same format for the answers to all prompts in Question 6)
 
 2. [[], 24, 'hello', true]
+  number of elements:4
+  - []:array
+  - 24:number
+  - 'hello':1
+  - 'true':boolean
 
 3. []
+number of elements:0
+  - []:array
 
 4. [['romeo', 'juliet'], false]
 
+   number of elements:2
+  - false:boolean
+  - ['romeo', 'juliet']:an array of two elements with strings
+
+
 5. [{name: 'bob', age: 23}, {name: 'paul', age: 33}]
+  number of elements:2
+  - {name: 'bob', age: 23} object with a string and number variable
+    {name: 'paul', age: 33} object with a string and number variable
 
 ## Question 7: What is the type and value for each of the following variables?
 
 1. let name = 'bob';
 
-- type:
-- value:
+- type:string
+- value:bob
 
 2. let age = 45;
+- type:number
+- value:45
 
 3. let isMarried = false;
+- type:boolean
+- value:false
 
 4. let person = { name: name, age: age, isMarried: isMarried }
+  - type:object
+- value:name,age,ismarried
 
 5. let kids = [{name: 'Morty', age: 3}, {name: 'Summer', age: 7}]
-
+  - type:object
+- value:Morty,3,Summer,7
 ## Question 8: Use string interpolation instead of concatenation
 
 1.
@@ -85,8 +111,7 @@
 ```js
 const name = 'Jack';
 const greeting = 'Hi';
-
-console.log(greeting + ' ' + name + '!');
+console.log(`${greeting} ${name}!`);
 ```
 
 2.
@@ -95,13 +120,13 @@ console.log(greeting + ' ' + name + '!');
 const person1 = { name: 'Mabel', age: 102 };
 const person2 = { name: 'Doug', age: 104 };
 
+
 console.log(
-  person1.name +
-    ' and ' +
-    person2.name +
-    ' are the oldest people I know. Together, they have lived for ' +
-    (person1.age + person2.age) +
-    ' years!'
+  `${person1.name} and ${
+    person2.name
+  } are the oldest people I know. Together, they have lived for ${
+    person1.age + person2.age
+  } years!`
 );
 ```
 
