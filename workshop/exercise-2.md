@@ -51,8 +51,15 @@ easier to read. Like the gap between 2. and 1. in the example's solution.
 Put your solution between the ```:
 _THIS IS SUPER IMPORTANT_, otherwise Prettier might destroy your solution:
 
+4. let sentence = 'Hello world!';
+3. if (sentence.includes('Hello')) {
+2.   console.log('Sentence DOES contain the word "Hello"');
+5. } else {
+1.   console.log('Sentence DOES NOT contain the word "Hello"');
+}
 ```
 // Your solution here!
+
 
 ```
 
@@ -64,6 +71,10 @@ _THIS IS SUPER IMPORTANT_, otherwise Prettier might destroy your solution:
 4. const secondIndex = 1;
 5. const thirdIndex = = 0;
 
+2. const array = [[1, [2, 3]]];
+1. const firstIndex = 0;
+4. const secondIndex = 1;
+5. const thirdIndex = = 0;
 ```
 // Your solution here!
 ```
@@ -80,6 +91,12 @@ _THIS IS SUPER IMPORTANT_, otherwise Prettier might destroy your solution:
 ```
 // Your solution here!
 ```
+4. let min = 5;
+2. let currentNum = 10;
+1. while (currentNum > min) {
+5. currentNum = currentNum - 1;
+3. console.log(currentNum);
+}   
 
 ## Question 4: Reverse the string to check for hidden messages
 
@@ -93,6 +110,13 @@ _THIS IS SUPER IMPORTANT_, otherwise Prettier might destroy your solution:
 
 ```
 // Your solution here!
+3. const letterArray = encodedMessage.split('');
+1. const reversedArray = letterArray.reverse();
+7. const reversedString = reversedArray.join('');
+
+5. if (reversedString.includes('treasure')) {
+2.   console.log('Your message:', reversedString)
+6. }
 ```
 
 ## Question 5: Add all the numbers from 10 to 0
@@ -105,11 +129,16 @@ _THIS IS SUPER IMPORTANT_, otherwise Prettier might destroy your solution:
 6. let count = 10;
 7. }
 
-```
 // Your solution here!
-```
+    let count = 10;
+     let total = 0;
+    while (count > 0) {
+``` count = count - 1;
+    1. total = total + count;
+    console.log('The total is:', total)
+    }
 
-## Question 6: Check if the array includes a specific number
+# Question 6: Check if the array includes a specific number
 
 1. }
 2. let includesNumber;
@@ -123,4 +152,15 @@ _THIS IS SUPER IMPORTANT_, otherwise Prettier might destroy your solution:
 
 ```
 // Your solution here!
+8. let array = [1, 3, 7, 4, 5, 2, 1];
+7. let numberToSearchFor = 5;
+2. let includesNumber;
+
+4. for (let i = 0; i < array.length; i++) {
+5.   let item = array[i];
+
+6.   if (item === numberToSearchFor) {
+3.     console.log('Array includes the number!')
+1.   }
+9. }
 ```
